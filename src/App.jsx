@@ -64,6 +64,22 @@ function App() {
     loadOverlays();
   };
 
+  const handleDeleteOverlay = async (id) => {
+  if (!window.confirm("Delete this overlay?")) return;
+
+  try {
+    setLoading(true);
+    await overlayAPI.deleteOverlay(id);
+    await loadOverlays();
+  } catch (e) {
+    console.error(e);
+    alert("Failed to delete overlay");
+  } finally {
+    setLoading(false);
+  }
+};
+
+
   return (
     <div className="app-container">
       <div className="app-content">
@@ -108,7 +124,9 @@ function App() {
             <OverlayList
               overlays={overlays}
               onEdit={setEditingOverlay}
+              onDelete={handleDeleteOverlay}
             />
+
           </div>
         </div>
 
