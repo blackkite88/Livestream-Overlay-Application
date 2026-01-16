@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 CORS(
     app,
-    resources={r"/api/*": {"origins": "https://livestream-overlay-application.onrender.com/"}},
+    resources={r"/api/*": {"origins": "https://livestream-overlay-application.onrender.com"}},
     supports_credentials=True
 )
 
