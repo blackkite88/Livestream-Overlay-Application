@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://livestream-overlay-application.onrender.com/';
+const API_BASE_URL = 'https://livestream-overlay-application.onrender.com';
 
 export const overlayAPI = {
   async getAllOverlays() {
