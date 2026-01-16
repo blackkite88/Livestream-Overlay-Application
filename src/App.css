@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  background: #0f0f0f;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.app-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 24px;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  border-radius: 12px;
+}
+
+.app-header h1 {
+  margin: 0 0 10px 0;
+  color: #4CAF50;
+  font-size: 32px;
+}
+
+.app-header p {
+  margin: 0;
+  color: #999;
+}
+
+.url-input-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #2a2a2a;
+  border-radius: 8px;
+}
+
+.url-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.url-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: 2px solid #444;
+  background: #1a1a1a;
+  color: white;
+}
+
+.video-section {
+  margin-bottom: 30px;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .controls-grid {
+    grid-template-columns: 1fr;
+  }
+}
